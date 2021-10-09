@@ -1,18 +1,24 @@
-public class LineComparisonComputation{
+package com.company;
 
-        public static void main(String args[]) {
+public class LineComparisonComputation {
+    public static void main(String[] args) {
+        System.out.println("Welcome to Comparison computation program");
+        LineComparison calculateLength = new LineComparison();
+        calculateLength.getUserInputForLine();
+        System.out.println("length of line1 is : "+calculateLength.lengthOfLine1());
+        calculateLength.getUserInputForLine();
+        System.out.println("length of line2 is : "+calculateLength.lengthOfLine2());
 
-                System.out.println("Welcome To Line Comparision Program");
-                int X1=6,Y1=2,X2=2,Y2=8;
-                Double lengthOfLine = Math.sqrt((X2-X1)*(X2-X1) + (Y2-Y1) *(Y2-Y1)) ;
-                System.out.println("Length of line "+"("+X1+","+Y1+"),"+"("+X2+","+Y2+") is "+lengthOfLine);
+        String getLine1=calculateLength.line1+"";
+        String getLine2=calculateLength.line2+"";
 
-                int X3=12,Y3=4,X4=4,Y4=16;
-                Double lengthOfLine1 = Math.sqrt((X4-X3)*(X4-X3) + (Y4-Y3) *(Y4-Y3)) ;
-                System.out.println("Length of Line "+"("+X3+","+Y3+"),"+"("+X4+","+Y4+") is "+lengthOfLine1);
-                
-                System.out.println( lengthOfLine == lengthOfLine1);//false
-                //Compare is greater than (1) or less than (-1)
-                System.out.println(lengthOfLine + " .compareTo " + lengthOfLine1 + ": " + lengthOfLine.compareTo(lengthOfLine1));
+        int check = getLine1.compareTo(getLine2);
+        if(check==0) {
+            System.out.print("both line length are equal");
+        }else if(check>0) {
+            else{
+            System.out.print("Line1 is smaller than Line2");
         }
-}
+    }
+}System.out.print("Line1 is Greater than Line2");
+        }
